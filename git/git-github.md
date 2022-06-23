@@ -44,10 +44,15 @@ con **git merge** combino este documento del repositorio local con mi directorio
 
 # git merge
 Este funciona en la rama donde este, sea la principal o una secundaria. 
+Despues de esto, los cambios de las ramas que se mencionen en el commit se combinan junto
+A los cambios de la rama actual para formar un archivo unificado. 
 
 # git pull
 Combina fetch y merge. 
 
 # branches
 Creamos una nueva rama con copias de la rama principal que podemos modificar mas los cambios no estaran reflejados alli. 
-asdasdads
+
+# conflictos
+Estos ocurren cuando se modifican las mismas lineas de codigo. Cuando esto sucede, se deben de solucionar aceptando
+o rechazando cambios al codigo realizados en las otras ramas. 
