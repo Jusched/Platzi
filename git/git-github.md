@@ -42,8 +42,12 @@ Enviamos todo del repositorio local al repositorio remoto.
 Trae documentos del repositorio remoto al local sin crear copias en mi directorio de trabajo. 
 con **git merge** combino este documento del repositorio local con mi directorio de trabajo. 
 
+# git merge
+Este funciona en la rama donde este, sea la principal o una secundaria. 
+
 # git pull
 Combina fetch y merge. 
 
 # branches
 Creamos una nueva rama con copias de la rama principal que podemos modificar mas los cambios no estaran reflejados alli. 
+asdasdads
