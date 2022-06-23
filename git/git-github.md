@@ -60,3 +60,80 @@ Despues de hacer esto, el cambio conflictivo sigue en la otra rama a la que se l
 
 # git pull origin master --allow-unrelated-histories
 Esto se debe de hacer cuando en el repositorio existen archivos que no tenemos nosotros.
+------------------------------------------------------------------------------------------------------------------------------
+# git log --all --graph --decorate --oneline
+Toda la historia del archivo en el git
+
+# alias arbol="comando"
+Para crear un atajo a la ejecucion del comando
+
+# git push origin --tags
+Para hacer push a los tags y en donde dice "branch" en github, aparecera el tag. 
+
+# borrar tags equivocados/malhechos
+git tag para verlos, git tag -d "tag" para borrarlo 
+Se borra en git mas no en github
+Para solucionarlo: git push origin :refs/tags/"tag"
+-----------------------------------------------------
+# git show-branch -all
+Historia de los branches
+**gitk** para verlo de manera visual viendo que se le añade y quita en cada version
+
+# git push origin "branch"
+Para cargar un branch especifico que hayamos usado 
+-----------------------------------------------------------
+**Como traer proyectos inicializados anteriormente**
+## git clone "url repo"
+Clona automaticamente todo, si el repo es publico, no pide contraseña
+Si fuera privado, pediria usuario y contraseña
+
+# Agregar colaboradores o personas con acceso a hacer **Push**
+Settings del *repo* y collaborators.
+Se puede usar el email o el nombre de usuario
+Una vez hecho, ya se pueden hacer push desde el usuario nuevo. 
+======================================================================
+# Flujo de trabajo profesional
+**En el Master solo se envia lo que esta listo para produccion, se trabaja en branches**
+*No se deben de enviar archivos binarios como imagenes pues pesan mucho*
+
+Es posible que los cambios en imagenes no se vean reflejados por lo que es necesario usar algo como Ctrl + Shift + R
+Lo importante de trabajar en branches es que los demas pueden tener su trabajo para despues combinarlo en el main
+
+# Proceso
+git checkout master
+git merge header
+-m "Agregando x del proyecto"
+
+Y asi con los demas branches. Esto generalmente lo hace el CTO, Product Manager
+
+# Como funciona IRL
+Los PR son la base de la colaboración a proyectos Open Source, si tienen pensando colaborar en alguno
+es muy importante entender esto y ver cómo se hace en las próximas clases. Por lo general es forkear el proyecto,
+implementar el cambio en una nueva rama, hacer el PR y esperar que los administradores del proyecto hagan el 
+merge o pidan algún cambio en el código o commits que hiciste.
+
+Los que hacen esto son generalmente los lideres de equipo o DevOps
+
+Pull requests en github sirven para hacer merge en cambios que se puedan hacer facilmente, puede tener reviewers,
+encargados, labels...
+Una vez hecho el request, los demas pueden verlo. 
+Una vez haya sido arreglado los cambios de uno de los archivos, se pide el merge. 
+Si le damos a aprobar siendo reviewer, solo hace que ya haya realizado su labor de verificar. 
+Un colaborador debe de hacer el merge. 
+Algunos branchs pueden ser arreglos urgentes por lo que una vez realizado el merge, se puede eliminar el branch. 
+
+# Resumen pull request (PR)
+Son pausas antes de hacer el merge para hacer code review para hacer un trabajo completo. 
+
+# Pull request desde open source
+**Fork** es tomar una copia del estado actual del proyecto y clonarlo. SOLO GITHUB.
+Hacemos las modificaciones y mandamos un PR
+Podemos solo comentar o cerrar el PR
+
+Para no quedarnos atras en el fork, es bueno crear otro branch dedicado a los cambios del open source. 
+
+# Ignorando archivos
+Si queremos que algo no se suba con push a git ni se vea en el status, creamos un .gitignore
+*.jpg (Ignora todos los .jpg)
+
+# github pages funciona para montar paginas web pero solo funciona con repos publicos
