@@ -56,3 +56,7 @@ Creamos una nueva rama con copias de la rama principal que podemos modificar mas
 # conflictos
 Estos ocurren cuando se modifican las mismas lineas de codigo. Cuando esto sucede, se deben de solucionar aceptando
 o rechazando cambios al codigo realizados en las otras ramas. 
+Despues de hacer esto, el cambio conflictivo sigue en la otra rama a la que se le pidio merge. 
+
+# git pull origin master --allow-unrelated-histories
+Esto se debe de hacer cuando en el repositorio existen archivos que no tenemos nosotros.
